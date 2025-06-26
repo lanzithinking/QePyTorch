@@ -132,17 +132,17 @@ class MultivariateQExponential(TMultivariateNormal, Distribution):
         n = self.event_shape[0]
         return torch.exp((2./self.power*math.log(2) - math.log(n) + torch.lgamma(n/2.+2./self.power) - math.lgamma(n/2.))/2.)
 
-    def confidence_region(self, alpha=0.05, rescale=False) -> Tuple[Tensor, Tensor]:
+    def confidence_region(self, rescale=False) -> Tuple[Tensor, Tensor]:
         """
-        Returns 100(1-alpha)% confidence region.
+        Returns 2 standard deviations above and below the mean.
 
         :return: Pair of tensors of size `... x N`, where N is the
             dimensionality of the random variable. The first (second) Tensor is the
             lower (upper) end of the confidence region.
         """
-        from . import QExponential
-        qeps = QExponential(self.mean, self.stddev*(self.rescalor if rescale else 1))
-        return qeps.confidence(alpha)
+        std2 = self.stddev.mul(2).mul(self.rescalor if rescale else 1)
+        mean = self.mean
+        return mean.sub(std2), mean.add(std2)
 
     def expand(self, batch_size: torch.Size) -> MultivariateQExponential:
         r"""

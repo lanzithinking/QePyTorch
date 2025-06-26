@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-:github_url: https://github.com/lanzithinking/qpytorch
+:github_url: https://github.com/lanzithinking/QePyTorch
 
 QPyTorch's documentation
 ====================================
@@ -63,6 +63,14 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+
+Projects
+==================
+
+* Q-Exponential Process    `[Q-EXP] <https://github.com/lanzithinking/Q-EXP>`_
+* Regularization of Latent Representation    `[Reg_Rep] <https://github.com/lanzithinking/Reg_Rep>`_
+* Deep Q-Exponential Processes    `[DeepQEP] <https://github.com/lanzithinking/DeepQEP>`_
 
 
 Research references

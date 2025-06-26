@@ -1,8 +1,8 @@
 # Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch
 
 ---
-[![Test Suite](https://github.com/lanzithinking/qpytorch/actions/workflows/run_test_suite.yml/badge.svg)](https://github.com/lanzithinking/qpytorch/actions/workflows/run_test_suite.yml)
-[![Documentation Status](https://readthedocs.org/projects/qpytorch/badge/?version=stable)](https://qpytorch.readthedocs.io/en/stable/?badge=stable)
+[![Test Suite](https://github.com/lanzithinking/qepytorch/actions/workflows/run_test_suite.yml/badge.svg)](https://github.com/lanzithinking/qepytorch/actions/workflows/run_test_suite.yml)
+[![Documentation Status](https://readthedocs.org/projects/qpytorch/badge/?version=stable)](https://qepytorch.readthedocs.io/en/stable/?badge=stable)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -24,7 +24,7 @@ Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch provides (1) significant GP
 
 ## Examples, Tutorials, and Documentation
 
-See our [**documentation, examples, tutorials**](https://qpytorch.readthedocs.io/en/stable/) on how to construct all sorts of models in Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch.
+See our [**documentation, examples, tutorials**](https://qepytorch.readthedocs.io/en/stable/) on how to construct all sorts of models in Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch.
 
 ## Installation
 
@@ -49,7 +49,7 @@ To upgrade to the latest (unstable) version, run
 ```bash
 pip install --upgrade git+https://github.com/cornellius-gp/linear_operator.git
 pip install --upgrade git+https://github.com/cornellius-gp/gpytorch.git
-pip install --upgrade git+https://github.com/lanzithinking/qpytorch.git
+pip install --upgrade git+https://github.com/lanzithinking/qepytorch.git
 ```
 
 #### Development version
@@ -57,7 +57,7 @@ pip install --upgrade git+https://github.com/lanzithinking/qpytorch.git
 If you are contributing a pull request, it is best to perform a manual installation:
 
 ```sh
-git clone https://github.com/lanzithinking/qpytorch.git
+git clone https://github.com/lanzithinking/qepytorch.git
 cd qpytorch
 pip install -e .[dev,docs,examples,keops,pyro,test]  # keops and pyro are optional
 ```
@@ -90,7 +90,7 @@ If you use Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch, please cite the
 
 ## Contributing
 
-See the contributing guidelines [CONTRIBUTING.md](https://github.com/lanzithinking/qpytorch/blob/main/CONTRIBUTING.md)
+See the contributing guidelines [CONTRIBUTING.md](https://github.com/lanzithinking/qepytorch/blob/main/CONTRIBUTING.md)
 for information on submitting issues and pull requests.
 
 
@@ -114,4 +114,4 @@ Development of Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is supported
 
 ## License
 
-Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is [MIT licensed](https://github.com/lanzithinking/qpytorch/blob/main/LICENSE).
+Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is [MIT licensed](https://github.com/lanzithinking/qepytorch/blob/main/LICENSE).

@@ -7,7 +7,7 @@ Thanks for contributing!
 To get the development installation with all the necessary dependencies for
 linting, testing, and building the documentation, run the following:
 ```bash
-git clone https://github.com/lanzithinking/qpytorch.git
+git clone https://github.com/lanzithinking/qepytorch.git
 cd qpytorch
 pip install -e .[dev,docs,examples,keops,pyro,test]  # keops and pyro are optional
 pre-commit install
@@ -97,10 +97,10 @@ We greatly appreciate PRs! To minimize back-and-forward communication, please en
    - If you are adding a new feature, you should add unit tests for this new feature.
 1. **Documentation.** Any new objects/methods should have [appropriate docstrings](#docstrings).
    - If you are adding a new object, **please ensure that it appears in the documentation.**
-     You may have to add the object to the appropriate file in [docs/source](https://github.com/lanzithinking/qpytorch/tree/main/docs/source).
+     You may have to add the object to the appropriate file in [docs/source](https://github.com/lanzithinking/qepytorch/tree/main/docs/source).
 1. **Example notebooks.** Any major new functionality, tutorials, or examples should have an example jupyter notebook.
    - If you are adding a new notebook, **please ensure that it appears in the documentation.**
-     You may have to add the object to the appropriate file in [docs/source](https://github.com/lanzithinking/qpytorch/tree/main/examples/).
+     You may have to add the object to the appropriate file in [docs/source](https://github.com/lanzithinking/qepytorch/tree/main/examples/).
 
 Before submitting a PR, ensure the following:
 1. **Code is proprerly formatted and linted.** Linting and formatting checking should happen automatically if you have followed the development installation instructions.
@@ -122,7 +122,7 @@ We accept the following types of issues:
 - Performance issues (speed, memory, etc.)
 
 Please refrain from using the issue tracker for questions or debugging personal code.
-Instead please use the [Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch discussions forum](https://github.com/lanzithinking/qpytorch/discussions).
+Instead please use the [Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch discussions forum](https://github.com/lanzithinking/qepytorch/discussions).
 
 ## License
 
