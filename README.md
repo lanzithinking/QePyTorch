@@ -2,7 +2,7 @@
 
 ---
 [![Test Suite](https://github.com/lanzithinking/qepytorch/actions/workflows/run_test_suite.yml/badge.svg)](https://github.com/lanzithinking/qepytorch/actions/workflows/run_test_suite.yml)
-[![Documentation Status](https://readthedocs.org/projects/qpytorch/badge/?version=stable)](https://qepytorch.readthedocs.io/en/stable/?badge=stable)
+[![Documentation Status](https://readthedocs.org/projects/qpytorch/badge/?version=latest)](https://qepytorch.readthedocs.io/en/stable/?badge=latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -57,23 +57,26 @@ pip install --upgrade git+https://github.com/lanzithinking/qepytorch.git
 If you are contributing a pull request, it is best to perform a manual installation:
 
 ```sh
-git clone https://github.com/lanzithinking/qepytorch.git
+git clone https://github.com/lanzithinking/qepytorch.git qpytorch
 cd qpytorch
 pip install -e .[dev,docs,examples,keops,pyro,test]  # keops and pyro are optional
 ```
 
+<!--
 #### ArchLinux Package
 **Note**: Experimental AUR package. For most users, we recommend installation by conda or pip.
-
+-->
+<!--
 Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is also available on the [ArchLinux User Repository](https://wiki.archlinux.org/index.php/Arch_User_Repository) (AUR).
 You can install it with an [AUR helper](https://wiki.archlinux.org/index.php/AUR_helpers), like [`yay`](https://aur.archlinux.org/packages/yay/), as follows:
-
+-->
+<!--
 ```bash
 yay -S python-qpytorch
 ```
 To discuss any issues related to this AUR package refer to the comments section of
 [`python-qpytorch`](https://aur.archlinux.org/packages/python-qpytorch/).
-
+-->
 
 ## Citing Us
 
