@@ -86,7 +86,7 @@ for root, dirs, files in os.walk(examples_source):
 
 # -- Project information -----------------------------------------------------
 
-project = "QPyTorch"
+project = "QePyTorch"
 copyright = "2025, lanzithinking"
 author = "lanzithinking"
 
@@ -184,6 +184,7 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 html_css_files = ['custom.css']
+html_js_files = ['custom.js']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -199,7 +200,7 @@ html_css_files = ['custom.css']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "QPyTorchdoc"
+htmlhelp_basename = "QePyTorchdoc"
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -222,14 +223,14 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-latex_documents = [(master_doc, "QPyTorch.tex", "QPyTorch Documentation", "lanzithinking", "manual")]
+latex_documents = [(master_doc, "QePyTorch.tex", "QePyTorch Documentation", "lanzithinking", "manual")]
 
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [(master_doc, "qpytorch", "QPyTorch Documentation", [author], 1)]
+man_pages = [(master_doc, "qpytorch", "QePyTorch Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -240,10 +241,10 @@ man_pages = [(master_doc, "qpytorch", "QPyTorch Documentation", [author], 1)]
 texinfo_documents = [
     (
         master_doc,
-        "QPyTorch",
-        "QPyTorch Documentation",
+        "QePyTorch",
+        "QePyTorch Documentation",
         author,
-        "QPyTorch",
+        "QePyTorch",
         "One line description of project.",
         "Miscellaneous",
     )

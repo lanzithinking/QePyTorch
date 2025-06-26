@@ -1,4 +1,4 @@
-# Contributing to QPyTorch
+# Contributing to Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch
 
 Thanks for contributing!
 
@@ -18,7 +18,7 @@ pre-commit install
 
 ### Formatting and Linting
 
-QPyTorch uses [pre-commit](https://pre-commit.com) for code formatting
+Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch uses [pre-commit](https://pre-commit.com) for code formatting
 and [flake8](https://flake8.pycqa.org/en/latest/) for linting.
 This enforces a common code style across the repository.
 The [development installation instructions](#development-installation) should install both tools, and no additional configuration should be necessary.
@@ -36,7 +36,7 @@ We use [standard sphinx docstrings](https://sphinx-rtd-tutorial.readthedocs.io/e
 
 ### Type Hints
 
-QPyTorch aims to be fully typed using Python 3.8+
+Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch aims to be fully typed using Python 3.8+
 [type hints](https://www.python.org/dev/peps/pep-0484/).
 
 We recognize that we have a long way to go towards fully typing the library,
@@ -59,7 +59,7 @@ python -m unittest
 
 ### Documentation
 
-QPyTorch uses sphinx to generate documentation, and ReadTheDocs to host documentation.
+Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch uses sphinx to generate documentation, and ReadTheDocs to host documentation.
 To build the documentation locally, ensure that sphinx and its plugins are properly installed (see the [development installation section](#development-installation) for instructions).
 Then run:
 
@@ -122,9 +122,9 @@ We accept the following types of issues:
 - Performance issues (speed, memory, etc.)
 
 Please refrain from using the issue tracker for questions or debugging personal code.
-Instead please use the [QPyTorch discussions forum](https://github.com/lanzithinking/qpytorch/discussions).
+Instead please use the [Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch discussions forum](https://github.com/lanzithinking/qpytorch/discussions).
 
 ## License
 
-By contributing to QPyTorch, you agree that your contributions will be licensed
+By contributing to Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch, you agree that your contributions will be licensed
 under the LICENSE file in the root directory of this source tree.
