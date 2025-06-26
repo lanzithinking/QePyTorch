@@ -1,0 +1,12 @@
+name: qpytorch
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - -e .[dev,docs,examples,keops,pyro,test]
+      - numpy<2.0 # Numpy 2.0 is not fully supported
+
+# conda env create -f venv_install.yaml

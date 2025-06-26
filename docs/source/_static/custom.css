@@ -1,0 +1,19 @@
+/* .highlight-module {
+    background-color: #ffeeba;
+    color: #333;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+} */
+
+/* Highlight for modules, fits with Read the Docs theme */
+.highlight-module {
+    background-color: #e7f3ff; /* light blue background */
+    color: #0b5394;            /* dark blue text */
+    padding: 2px 6px;
+    border: 1px solid #b6d4fe;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 90%;
+    white-space: nowrap;
+}
