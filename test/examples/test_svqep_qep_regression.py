@@ -94,7 +94,7 @@ class TestSVQEPRegression(BaseTestCase, unittest.TestCase):
         _wrapped_cg = MagicMock(wraps=linear_operator.utils.linear_cg)
         _cg_mock = patch("linear_operator.utils.linear_cg", new=_wrapped_cg)
         with _cg_mock as cg_mock:
-            for _ in range(150):
+            for _ in range(200):
                 optimizer.zero_grad()
                 output = model(train_x)
                 loss = -mll(output, train_y)
