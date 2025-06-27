@@ -5,7 +5,7 @@
 [![Documentation Status](https://readthedocs.org/projects/qepytorch/badge/?version=latest)](https://qepytorch.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Conda](https://img.shields.io/conda/v/qpytorch/qpytorch.svg)](https://anaconda.org/qpytorch/qpytorch)
 [![PyPI](https://img.shields.io/pypi/v/qpytorch.svg)](https://pypi.org/project/qpytorch)
 
