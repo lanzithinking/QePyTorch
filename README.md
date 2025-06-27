@@ -29,8 +29,8 @@ See our [**documentation, examples, tutorials**](https://qepytorch.readthedocs.i
 ## Installation
 
 **Requirements**:
-- Python >= 3.8
-- PyTorch >= 2.0
+- Python >= 3.10
+- PyTorch >= 2.2
 - GPyTorch >= 1.13
 
 Install Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch using pip or conda:
