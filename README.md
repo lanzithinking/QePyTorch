@@ -2,7 +2,7 @@
 
 ---
 [![Test Suite](https://github.com/lanzithinking/qepytorch/actions/workflows/run_test_suite.yml/badge.svg)](https://github.com/lanzithinking/qepytorch/actions/workflows/run_test_suite.yml)
-[![Documentation Status](https://readthedocs.org/projects/qpytorch/badge/?version=latest)](https://qepytorch.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/qepytorch/badge/?version=latest)](https://qepytorch.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 [![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
