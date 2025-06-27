@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 [![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Conda](https://img.shields.io/conda/v/qpytorch/qpytorch.svg)](https://anaconda.org/qpytorch/qpytorch)
+[![Conda](https://img.shields.io/conda/v/conda-forge/qpytorch.svg)](https://anaconda.org/conda-forge/qpytorch)
 [![PyPI](https://img.shields.io/pypi/v/qpytorch.svg)](https://pypi.org/project/qpytorch)
 
 Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is a Q-exponential process library implemented using PyTorch built on [GPyTorch](https://gpytorch.ai). Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is designed for creating scalable, flexible, and modular Q-exponential process models with ease.
