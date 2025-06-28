@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 [![Python Version](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Conda](https://img.shields.io/conda/v/conda-forge/qpytorch.svg)](https://anaconda.org/conda-forge/qpytorch)
+[![Conda](https://img.shields.io/conda/v/qpytorch.svg)](https://anaconda.org/qpytorch)
 [![PyPI](https://img.shields.io/pypi/v/qpytorch.svg)](https://pypi.org/project/qpytorch)
 
 Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is a Python package for Q-exponential process ([QEP](https://papers.nips.cc/paper_files/paper/2023/file/e6bfdd58f1326ff821a1b92743963bdf-Paper-Conference.pdf)) implemented using PyTorch and built up on [GPyTorch](https://gpytorch.ai). Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is designed to facilitate creating scalable, flexible, and modular QPE models.
@@ -28,7 +28,7 @@ See [**documentation**](https://qepytorch.readthedocs.io/en/stable/) on how to c
 
 **Requirements**:
 - Python >= 3.10
-- PyTorch >= 2.2
+- PyTorch >= 2.0
 - GPyTorch >= 1.13
 
 #### Stable Version
@@ -37,7 +37,7 @@ Install Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch using pip or conda:
 
 ```bash
 pip install qpytorch
-conda install qpytorch -c conda-forge
+conda install qpytorch
 ```
 
 (To use packages globally but install Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch as a user-only package, use `pip install --user` above.)
@@ -60,7 +60,7 @@ cd qepytorch
 # either
 pip install -e .[dev,docs,examples,keops,pyro,test]  # keops and pyro are optional
 # or
-conda env create -f venv_install.yaml # installed in virtual environment qpytorch
+conda env create -f env_install.yaml # installed in the environment qpytorch
 ```
 
 <!--

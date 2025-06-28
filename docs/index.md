@@ -35,7 +35,7 @@ conda install -c conda-forge qpytorch
 ```
 git clone https://github.com/lanzithinking/qepytorch.git
 cd qepytorch
-conda env create -f venv_install.yaml
+conda env create -f env_install.yaml
 ```
 
 * * *

@@ -37,7 +37,7 @@ def find_version(*file_paths):
 readme = open("README.md").read()
 
 
-torch_min = "2.2"
+torch_min = "2.0"
 install_requires = [
     "jaxtyping",
     "mpmath>=0.19,<=1.3",  # avoid incompatibiltiy with torch+sympy with mpmath 1.4
@@ -45,6 +45,7 @@ install_requires = [
     "scipy>=1.6.0",
     "linear_operator>=0.6",
     "gpytorch>=1.13",
+    "numpy<2",  # avoid incompatibility of torch with numpy 2 (the minimum supporting (numpy 2) version of pytorch is 2.3)
 ]
 # if recent dev version of PyTorch is installed, no need to install stable
 try:
