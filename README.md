@@ -9,9 +9,9 @@
 [![Conda](https://img.shields.io/conda/v/conda-forge/qpytorch.svg)](https://anaconda.org/conda-forge/qpytorch)
 [![PyPI](https://img.shields.io/pypi/v/qpytorch.svg)](https://pypi.org/project/qpytorch)
 
-Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is a Python package for Q-exponential process ([QEP](https://papers.nips.cc/paper_files/paper/2023/file/e6bfdd58f1326ff821a1b92743963bdf-Paper-Conference.pdf)) implemented using PyTorch and built on [GPyTorch](https://gpytorch.ai). Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is designed to facilitate creating scalable, flexible, and modular QPE models.
+Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is a Python package for Q-exponential process ([QEP](https://papers.nips.cc/paper_files/paper/2023/file/e6bfdd58f1326ff821a1b92743963bdf-Paper-Conference.pdf)) implemented using PyTorch and built up on [GPyTorch](https://gpytorch.ai). Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is designed to facilitate creating scalable, flexible, and modular QPE models.
 
-Different from GPyTorch for Gaussian process (GP) models, Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch focus on QEP, which generalizes GP by allowing flexible regularization on function spaces through a parameter $q>0$ and embraces GP as a special case with $q=2$. QEP is proven to be superior than GP in modeling inhomogeneous objects with abrupt changes or sharp contrast for $q<2$.
+Different from GPyTorch for Gaussian process (GP) models, Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch focuses on QEP, which generalizes GP by allowing flexible regularization on function spaces through a parameter $q>0$ and embraces GP as a special case with $q=2$. QEP is proven to be superior than GP in modeling inhomogeneous objects with abrupt changes or sharp contrast for $q<2$ [[Li et al (2023)]](https://papers.nips.cc/paper_files/paper/2023/hash/e6bfdd58f1326ff821a1b92743963bdf-Abstract-Conference.html).
 Inherited from GPyTorch, Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch has an efficient and scalable implementation by taking advantage of numerical linear algebra library [LinearOperator](https://github.com/cornellius-gp/linear_operator) and improved GPU utilization.
 
 
@@ -60,7 +60,7 @@ cd qepytorch
 # either
 pip install -e .[dev,docs,examples,keops,pyro,test]  # keops and pyro are optional
 # or
-conda env create -f venv_install.yaml
+conda env create -f venv_install.yaml # installed in virtual environment qpytorch
 ```
 
 <!--
@@ -81,7 +81,7 @@ To discuss any issues related to this AUR package refer to the comments section 
 
 ## Citing Us
 
-If you use Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch, please cite the following papers:
+If you use Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch, please cite the following paper:
 > [Li, Shuyi, Michael O'Connor, and Shiwei Lan. "Bayesian Learning via Q-Exponential Process." In Advances in Neural Information Processing Systems (2023).](https://papers.nips.cc/paper_files/paper/2023/hash/e6bfdd58f1326ff821a1b92743963bdf-Abstract-Conference.html)
 ```
 @inproceedings{li2023QEP,
@@ -104,7 +104,7 @@ Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is primarily maintained by:
 - [Shiwei Lan](https://math.la.asu.edu/~slan) (Arizona State University)
 
 Thanks to the following contributors including (but not limited to)
-Shuyi Li,
+- Shuyi Li,
 Guangting Yu,
 Zhi Chang,
 Chukwudi Paul Obite,
