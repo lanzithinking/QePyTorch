@@ -9,22 +9,20 @@
 [![Conda](https://img.shields.io/conda/v/conda-forge/qpytorch.svg)](https://anaconda.org/conda-forge/qpytorch)
 [![PyPI](https://img.shields.io/pypi/v/qpytorch.svg)](https://pypi.org/project/qpytorch)
 
-Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is a Q-exponential process library implemented using PyTorch built on [GPyTorch](https://gpytorch.ai). Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is designed for creating scalable, flexible, and modular Q-exponential process models with ease.
+Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is a Python package for Q-exponential process ([QEP](https://papers.nips.cc/paper_files/paper/2023/file/e6bfdd58f1326ff821a1b92743963bdf-Paper-Conference.pdf)) implemented using PyTorch and built on [GPyTorch](https://gpytorch.ai). Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is designed to facilitate creating scalable, flexible, and modular QPE models.
 
-Internally, Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch differs from many existing approaches to QEP inference by performing most inference operations using numerical linear algebra techniques like preconditioned conjugate gradients.
-Implementing a scalable QEP method is as simple as providing a matrix multiplication routine with the kernel matrix and its derivative via our [LinearOperator](https://github.com/cornellius-gp/linear_operator) interface,
-or by composing many of our already existing `LinearOperators`.
-This allows not only for easy implementation of popular scalable QEP techniques,
-but often also for significantly improved utilization of GPU computing compared to solvers based on the Cholesky decomposition.
-
-Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch provides (1) significant GPU acceleration (through MVM based inference);
-(2) state-of-the-art implementations of the latest algorithmic advances for scalability and flexibility ([SKI/KISS-GP](http://proceedings.mlr.press/v37/wilson15.pdf), [stochastic Lanczos expansions](https://arxiv.org/abs/1711.03481), [LOVE](https://arxiv.org/pdf/1803.06058.pdf), [SKIP](https://arxiv.org/pdf/1802.08903.pdf), [stochastic variational](https://arxiv.org/pdf/1611.00336.pdf) [deep kernel learning](http://proceedings.mlr.press/v51/wilson16.pdf), ...);
-(3) easy integration with deep learning frameworks.
+Different from GPyTorch for Gaussian process (GP) models, Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch focus on QEP, which generalizes GP by allowing flexible regularization on function spaces through a parameter $q>0$ and embraces GP as a special case with $q=2$. QEP is proven to be superior than GP in modeling inhomogeneous objects with abrupt changes or sharp contrast for $q<2$.
+Inherited from GPyTorch, Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch has an efficient and scalable implementation by taking advantage of numerical linear algebra library [LinearOperator](https://github.com/cornellius-gp/linear_operator) and improved GPU utilization.
 
 
-## Examples, Tutorials, and Documentation
+<!--
+Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch features ...
+-->
 
-See our [**documentation, examples, tutorials**](https://qepytorch.readthedocs.io/en/stable/) on how to construct all sorts of models in Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch.
+
+## Tutorials, Examples, and Documentation
+
+See [**documentation**](https://qepytorch.readthedocs.io/en/stable/) on how to construct various QEP models in Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch.
 
 ## Installation
 
@@ -33,33 +31,36 @@ See our [**documentation, examples, tutorials**](https://qepytorch.readthedocs.i
 - PyTorch >= 2.2
 - GPyTorch >= 1.13
 
+#### Stable Version
+
 Install Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch using pip or conda:
 
 ```bash
 pip install qpytorch
-conda install qpytorch -c qpytorch
+conda install qpytorch -c conda-forge
 ```
 
 (To use packages globally but install Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch as a user-only package, use `pip install --user` above.)
 
-#### Latest (Unstable) Version
+#### Latest Version
 
-To upgrade to the latest (unstable) version, run
+To upgrade to the latest version, run
 
 ```bash
-pip install --upgrade git+https://github.com/cornellius-gp/linear_operator.git
-pip install --upgrade git+https://github.com/cornellius-gp/gpytorch.git
 pip install --upgrade git+https://github.com/lanzithinking/qepytorch.git
 ```
 
-#### Development version
+#### from source (for development)
 
 If you are contributing a pull request, it is best to perform a manual installation:
 
 ```sh
-git clone https://github.com/lanzithinking/qepytorch.git qpytorch
-cd qpytorch
+git clone https://github.com/lanzithinking/qepytorch.git
+cd qepytorch
+# either
 pip install -e .[dev,docs,examples,keops,pyro,test]  # keops and pyro are optional
+# or
+conda env create -f venv_install.yaml
 ```
 
 <!--
@@ -102,7 +103,7 @@ for information on submitting issues and pull requests.
 Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is primarily maintained by:
 - [Shiwei Lan](https://math.la.asu.edu/~slan) (Arizona State University)
 
-We would like to thank our other contributors including (but not limited to)
+Thanks to the following contributors including (but not limited to)
 Shuyi Li,
 Guangting Yu,
 Zhi Chang,
@@ -110,10 +111,10 @@ Chukwudi Paul Obite,
 Keyan Wu,
 and many more!
 
-
+<!--
 ## Acknowledgements
 Development of Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch is supported by.
-
+-->
 
 ## License
 

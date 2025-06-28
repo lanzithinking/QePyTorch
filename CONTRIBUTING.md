@@ -6,9 +6,10 @@ Thanks for contributing!
 
 To get the development installation with all the necessary dependencies for
 linting, testing, and building the documentation, run the following:
+
 ```bash
 git clone https://github.com/lanzithinking/qepytorch.git
-cd qpytorch
+cd qepytorch
 pip install -e .[dev,docs,examples,keops,pyro,test]  # keops and pyro are optional
 pre-commit install
 ```
@@ -25,6 +26,7 @@ The [development installation instructions](#development-installation) should in
 
 `flake8` and `pre-commit` are both run every time you make a local commit.
 To run both commands independent of making a commit:
+
 ```bash
 SKIP=flake8 pre-commit run --files test/**/*.py qpytorch/**/*.py
 flake8
@@ -36,7 +38,7 @@ We use [standard sphinx docstrings](https://sphinx-rtd-tutorial.readthedocs.io/e
 
 ### Type Hints
 
-Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch aims to be fully typed using Python 3.8+
+Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch aims to be fully typed using Python 3.10+
 [type hints](https://www.python.org/dev/peps/pep-0484/).
 
 We recognize that we have a long way to go towards fully typing the library,
@@ -54,7 +56,7 @@ python -m unittest
 ```
 
 - To run tests within a specific directory, run (e.g.) `python -m unittest discover -s test/kernels`.
-- To run a specific unit test, run (e.g.) `python -m unittest test.operators.test_rbf_kernel.TestRBFKernel.test_active_dims_range`.
+- To run a specific unit test, run (e.g.) `python -m unittest test.distributions.test_qexponential.TestQExponential.test_batch_log_prob`.
 
 
 ### Documentation
@@ -121,8 +123,10 @@ We accept the following types of issues:
 - Opportuntities to refactor code
 - Performance issues (speed, memory, etc.)
 
+<!--
 Please refrain from using the issue tracker for questions or debugging personal code.
-Instead please use the [Q<sup style="font-size: 0.5em;">&#9428;</sup>PyTorch discussions forum](https://github.com/lanzithinking/qepytorch/discussions).
+Instead please use the [QePyTorch discussions forum](https://github.com/lanzithinking/qepytorch/discussions).
+-->
 
 ## License
 
