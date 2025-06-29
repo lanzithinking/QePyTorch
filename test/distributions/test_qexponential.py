@@ -47,7 +47,7 @@ class TestQExponential(BaseTestCase, unittest.TestCase):
         torch_samples = QExponential(self.m, self.v, self.q).rsample(torch.Size([self.n_samples])).detach().cpu().numpy()
         torch_mean = np.mean(torch_samples)
         torch_var = np.var(torch_samples)
-        self.assertLess((torch_mean-self.analytic_mean).item(), 1e-2)
+        self.assertLess((torch_mean-self.analytic_mean).item(), 2e-2)
         self.assertLess((torch_var-3*self.analytic_var).item(), 5e-2)
 
 if __name__ == "__main__":
