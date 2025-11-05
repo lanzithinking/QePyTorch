@@ -4,8 +4,9 @@ Basic Usage
 This folder contains notebooks for basic usage of the package, e.g. things like dealing with hyperparameters,
 parameter constraints and priors, and saving and loading models.
 
+
 Before checking these out, you may want to check out the `introduction to Q-Exponential Process`_ and
- our `simple QEP regression tutorial`_ that details the anatomy of a QPyTorch model.
+our `simple QEP regression tutorial`_ that details the anatomy of a QPyTorch model.
 
 * Check out our `Tutorial on Hyperparameters`_ for information on things like raw versus actual
   parameters, constraints, priors and more.
