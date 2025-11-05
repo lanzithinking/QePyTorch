@@ -205,7 +205,7 @@ class MultitaskVariationalStrategy(_VariationalStrategy):
         num_tasks = full_output.num_tasks#.event_shape[-1]
         _interleaved = full_output._interleaved
         # Covariance terms
-        num_induc = inducing_points.size(-2)
+        num_induc = kwargs.pop('num_induc', inducing_values.shape[1:].numel())#inducing_points.size(-2))
         test_mean = full_output.mean[..., num_induc:, :]
         if _interleaved:
             induc_induc_covar = full_covar[..., :(num_induc*num_tasks), :(num_induc*num_tasks)].add_jitter(self.jitter_val) # interleaved
@@ -234,9 +234,10 @@ class MultitaskVariationalStrategy(_VariationalStrategy):
 
         # Compute the mean of q(f)
         # k_XZ K_ZZ^{-1/2} (m - K_ZZ^{-1/2} \mu_Z) + \mu_X
-        if len(self.variational_distribution.batch_shape) > 0:
-            if _interleaved: inducing_values = inducing_values.transpose(-1, -2)
-            inducing_values = inducing_values.reshape(*inducing_values.shape[:-2], -1)
+        if variational_inducing_covar.batch_dim > 0:
+            for _ in range(variational_inducing_covar.batch_dim):
+                if _interleaved: inducing_values = inducing_values.transpose(-1, -2)
+                inducing_values = inducing_values.reshape(*inducing_values.shape[:-2], -1)
         else:
             inducing_values = inducing_values.repeat_interleave(num_tasks,-1) if _interleaved else inducing_values.tile(num_tasks)
         predictive_mean = (interp_term.transpose(-1, -2) @ inducing_values.unsqueeze(-1)).squeeze(-1)
@@ -251,11 +252,13 @@ class MultitaskVariationalStrategy(_VariationalStrategy):
         middle_term = self.prior_distribution.lazy_covariance_matrix.mul(-1)
         if variational_inducing_covar is not None:
             middle_term = SumLinearOperator(variational_inducing_covar, middle_term)
-        if len(self.variational_distribution.batch_shape) > 0:
-            middle_term = BlockDiagLinearOperator(middle_term)
-            if _interleaved:
-                pi = torch.arange(num_induc * num_tasks, device=middle_term.device).view(num_tasks, num_induc).t().reshape((num_induc * num_tasks))
-                middle_term = middle_term[..., pi, :][..., :, pi]
+        if variational_inducing_covar.batch_dim > 0:
+            for _ in range(variational_inducing_covar.batch_dim):
+                b,n=middle_term.shape[-3:-1]
+                middle_term = BlockDiagLinearOperator(middle_term)
+                if _interleaved:
+                    pi = torch.arange(b * n, device=middle_term.device).view(b, n).t().reshape((b * n))
+                    middle_term = middle_term[..., pi, :][..., :, pi]
         else:
             if _interleaved:
                 middle_term = KroneckerProductLinearOperator(middle_term, DiagLinearOperator(torch.ones(num_tasks, device=middle_term.device)))

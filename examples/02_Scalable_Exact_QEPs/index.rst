@@ -38,7 +38,7 @@ Here are examples of Exact QEPs using GPU acceleration.
 Scalable Posterior Sampling with CIQ
 ---------------------------------------
 
-Here we provide a notebook demonstrating the use of Contour Integral Quadrature with msMINRES as described in the `CIQ paper`_.
+Here we provide a notebook of `QEP poseterior sampling with CIQ`_ demonstrating the use of Contour Integral Quadrature with msMINRES as described in the `CIQ paper`_.
 For the most dramatic results, we recommend combining this technique with other techniques in this section like kernel checkpointing with KeOps,
 which would allow for posterior sampling on up to hundreds of thousands of test examples.
 
@@ -95,6 +95,9 @@ See the `Grid Regression`_ example for more info.
 
 .. _KeOPs integration notebook:
   ./KeOps_QEP_Regression.ipynb
+
+.. _QEP poseterior sampling with CIQ:
+  ./Exact_QEP_Posterior_Sampling_with_CIQ.ipynb
 
 .. _Sparse Q-Exponential Process Regression (SQEPR):
   ./SQEPR_Regression_CUDA.ipynb

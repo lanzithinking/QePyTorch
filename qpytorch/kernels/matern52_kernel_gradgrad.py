@@ -74,11 +74,8 @@ class Matern52KernelGradGrad(MaternKernel):
         
         mask_idx1 = params.pop('mask_idx1', None) # mask off-diagonal covariance
         if mask_idx1 is not None:
-            mask_idx2 = params.pop('mask_idx2', None)
-            if mask_idx2 is None:
-                mask_idx2 = mask_idx1
-            else:
-                assert mask_idx1.shape[:-1] == mask_idx2.shape[:-1], 'Batch shapes of mask indices do not match!'
+            mask_idx2 = params.pop('mask_idx2', mask_idx1)
+            assert mask_idx1.shape[:-1] == mask_idx2.shape[:-1], 'Batch shapes of mask indices do not match!'
 
         if not diag:
 
@@ -211,17 +208,21 @@ class Matern52KernelGradGrad(MaternKernel):
                 K = K[..., pi1, :][..., :, pi2]
 
             if mask_idx1 is not None:
-                if mask_idx1.ndim==1:
-                    diag2keep = K[...,mask_idx1,mask_idx2]
-                    K[...,mask_idx1,:] = 0; K[...,mask_idx2] = 0
-                    K[...,mask_idx1,mask_idx2] = diag2keep * self.eps
-                elif mask_idx1.ndim==2:
-                    for b in range(mask_idx1.shape[0]):
-                        diag2keep = K[b,...,mask_idx1[b],mask_idx2[b]]
-                        K[b,...,mask_idx1[b],:] = 0; K[b,...,mask_idx2[b]] = 0
-                        K[b,...,mask_idx1[b],mask_idx2[b]] = diag2keep * self.eps
-                else:
-                    raise NotImplementedError('Mask indices of batch dimension bigger than 1 not implemented!')
+                diag2keep = K.diagonal(dim1=-1, dim2=-2)[mask_idx1&mask_idx2]
+                keep_idx = (~mask_idx1).unsqueeze(-1) & (~mask_idx2).unsqueeze(-2)
+                K = K * keep_idx
+                K.diagonal(dim1=-1, dim2=-2)[mask_idx1&mask_idx2] = diag2keep * self.eps
+                # if mask_idx1.ndim==1:
+                #     diag2keep = K[...,mask_idx1,mask_idx2]
+                #     K[...,mask_idx1,:] = 0; K[...,mask_idx2] = 0
+                #     K[...,mask_idx1,mask_idx2] = diag2keep * self.eps
+                # elif mask_idx1.ndim==2:
+                #     for b in range(mask_idx1.shape[0]):
+                #         diag2keep = K[b,...,mask_idx1[b],mask_idx2[b]]
+                #         K[b,...,mask_idx1[b],:] = 0; K[b,...,mask_idx2[b]] = 0
+                #         K[b,...,mask_idx1[b],mask_idx2[b]] = diag2keep * self.eps
+                # else:
+                #     raise NotImplementedError('Mask indices of batch dimension bigger than 1 not implemented!')
 
             return K
         else:

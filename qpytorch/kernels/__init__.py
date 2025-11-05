@@ -32,7 +32,9 @@ from gpytorch.kernels.rbf_kernel import RBFKernel
 from .rbf_kernel_grad import RBFKernelGrad
 from .rbf_kernel_gradgrad import RBFKernelGradGrad
 from .rff_kernel import RFFKernel
-from gpytorch.kernels.rq_kernel import RQKernel
+from .rq_kernel import RQKernel
+from .rq_kernel_grad import RQKernelGrad
+from .rq_kernel_gradgrad import RQKernelGradGrad
 from gpytorch.kernels.scale_kernel import ScaleKernel
 from gpytorch.kernels.spectral_delta_kernel import SpectralDeltaKernel
 from gpytorch.kernels.spectral_mixture_kernel import SpectralMixtureKernel
@@ -71,6 +73,8 @@ __all__ = [
     "RBFKernelGrad",
     "RBFKernelGradGrad",
     "RQKernel",
+    "RQKernelGrad",
+    "RQKernelGradGrad",
     "ScaleKernel",
     "SpectralDeltaKernel",
     "SpectralMixtureKernel",

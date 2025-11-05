@@ -189,6 +189,18 @@ Specialty Kernels
 .. autoclass:: RBFKernelGradGrad
    :members:
 
+:hlmod:`RQKernelGrad`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: RQKernelGrad
+   :members:
+
+:hlmod:`RQKernelGradGrad`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: RQKernelGradGrad
+   :members:
+
 :hlmod:`Matern32KernelGrad`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

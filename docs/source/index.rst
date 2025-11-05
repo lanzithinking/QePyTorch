@@ -71,7 +71,7 @@ Projects
 * Q-Exponential Process    `[Q-EXP] <https://github.com/lanzithinking/Q-EXP>`_
 * Regularization of Latent Representation    `[Reg_Rep] <https://github.com/lanzithinking/Reg_Rep>`_
 * Deep Q-Exponential Processes    `[DeepQEP] <https://github.com/lanzithinking/DeepQEP>`_
-
+* Solving PDE with Q-Exponential Processes    `[Diff_QEP] <https://github.com/lanzithinking/Diff_QEP>`_
 
 Research references
 ======================
@@ -79,3 +79,4 @@ Research references
 * Li, Shuyi, Michael O'Connor, and Shiwei Lan. "Bayesian Learning via Q-Exponential Process." In Advances in NIPS (2023).
 * Obite, Chukwudi P., Zhi Chang, Keyan Wu, and Shiwei Lan.  "Bayesian Regularization on Latent Representation." In ICLR (2025).
 * Chang, Zhi, Chukwudi P. Obite, Shuang Zhou, and Shiwei Lan.  "Deep Q-Exponential Processes. " In AABI (2025).
+* Yu, Guangting and Shiwei Lan. "Solving and Learning Partial Differential Equations with Variational Q-Exponential Processes." In NIPS (2025).
