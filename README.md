@@ -29,7 +29,7 @@ See [**documentation**](https://qepytorch.readthedocs.io/en/stable/) on how to c
 **Requirements**:
 - Python >= 3.10
 - PyTorch >= 2.0
-- GPyTorch >= 1.13
+- GPyTorch >= 1.14
 
 #### Stable Version
 

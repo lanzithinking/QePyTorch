@@ -44,7 +44,7 @@ install_requires = [
     "scikit-learn",
     "scipy>=1.6.0",
     "linear_operator>=0.6",
-    "gpytorch>=1.13",
+    "gpytorch>=1.14",
     "numpy<2",  # avoid incompatibility of torch with numpy 2 (the minimum supporting (numpy 2) version of pytorch is 2.3)
 ]
 # if recent dev version of PyTorch is installed, no need to install stable
