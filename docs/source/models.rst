@@ -143,3 +143,13 @@ Models for integrating with Pyro
 
 .. autoclass:: qpytorch.models.pyro.PyroQEP
    :members:
+
+
+:hlmod:`Q-Exponential Process PDE Solver`
+---------------------------------------------
+
+:hlmod:`PDESolver`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: qpytorch.models.PDESolver
+   :members:

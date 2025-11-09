@@ -97,7 +97,7 @@ try:
         distribution, as :math:`y(\mathbf x)` is equal to :math:`f(\mathbf x)` plus Gaussian (Q-Exponential) noise:
 
         .. math::
-            y(\mathbf x) = f(\mathbf x) + \epsilon, \:\:\:\: \epsilon \sim N(0,\sigma^{2}_{n} \mathbf I) or Q-EP(0,\sigma^{2}_{n} \mathbf I)
+            y(\mathbf x) = f(\mathbf x) + \epsilon, \:\:\:\: \epsilon \sim N(0,\sigma^{2}_{n} \mathbf I) \:\: or \:\: \textrm{q\!-\!ED}(0,\sigma^{2}_{n} \mathbf I)
 
         In the case of classification, this might be a Bernoulli distribution,
         where the probability that :math:`y=1` is given by the latent function

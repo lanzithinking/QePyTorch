@@ -149,7 +149,7 @@ class QExponentialLikelihood(_QExponentialLikelihoodBase):
     Assumes a standard homoskedastic noise model:
 
     .. math::
-        p(y \mid f) = f + \epsilon, \quad \epsilon \sim \mathcal Q-EP (0, \sigma^2)
+        p(y \mid f) = f + \epsilon, \quad \epsilon \sim \textrm{q\!-\!ED} (0, \sigma^2)
 
     where :math:`\sigma^2` is a noise parameter.
 
@@ -208,7 +208,7 @@ class QExponentialLikelihoodWithMissingObs(QExponentialLikelihood):
     Assumes a standard homoskedastic noise model:
 
     .. math::
-        p(y \mid f) = f + \epsilon, \quad \epsilon \sim \mathcal Q-EP (0, \sigma^2)
+        p(y \mid f) = f + \epsilon, \quad \epsilon \sim \textrm{q\!-\!ED} (0, \sigma^2)
 
     where :math:`\sigma^2` is a noise parameter. Values of y that are nan do
     not impact the likelihood calculation.

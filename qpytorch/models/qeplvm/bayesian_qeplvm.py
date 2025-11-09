@@ -13,15 +13,15 @@ class BayesianQEPLVM(ApproximateQEP):
     3. Q-Exponential variational distribution q(X) when prior_x is not None and inference == 'variational'
 
     .. seealso::
-        The `GPLVM tutorial
-        <examples/04_Variational_and_Approximate_GPs/Gaussian_Process_Latent_Variable_Models_with_Stochastic_Variational_Inference.ipynb>`_
+        The `QEPLVM tutorial
+        <examples/045_QEPLVM/QExponential_Process_Latent_Variable_Models_with_Stochastic_Variational_Inference.ipynb>`_
         for use instructions.
 
     :param X: An instance of a sub-class of the LatentVariable class. One of,
-        :class:`~gpytorch.models.qeplvm.PointLatentVariable`, :class:`~gpytorch.models.qeplvm.MAPLatentVariable`, or
-        :class:`~gpytorch.models.qeplvm.VariationalLatentVariable`, to facilitate inference with 1, 2, or 3 respectively.
-    :type X: ~gpytorch.models.LatentVariable
-    :param ~gpytorch.variational._VariationalStrategy variational_strategy: The strategy that determines
+        :class:`~qpytorch.models.qeplvm.PointLatentVariable`, :class:`~qpytorch.models.qeplvm.MAPLatentVariable`, or
+        :class:`~qpytorch.models.qeplvm.VariationalLatentVariable`, to facilitate inference with 1, 2, or 3 respectively.
+    :type X: ~qpytorch.models.LatentVariable
+    :param ~qpytorch.variational._VariationalStrategy variational_strategy: The strategy that determines
         how the model marginalizes over the variational distribution (over inducing points)
         to produce the approximate posterior distribution (over data)
     """

@@ -12,6 +12,7 @@ from .exact_qep import ExactQEP
 from .qep import QEP
 from .model_list import AbstractModelList, IndependentModelList, UncorrelatedModelList
 from .pyro import PyroGP, PyroQEP
+from .pde_solver import PDESolver
 
 # Alternative name for ApproximateGP, ApproximateQEP
 VariationalGP = ApproximateGP
@@ -69,4 +70,5 @@ __all__ = [
     "qeplvm",
     "exact_prediction_strategies",
     "pyro",
+    "PDESolver",
 ]
