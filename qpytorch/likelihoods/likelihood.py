@@ -90,14 +90,14 @@ try:
 
     class Likelihood(_Likelihood):
         r"""
-        A Likelihood in GPyTorch specifies the mapping from latent function values
+        A Likelihood in GPyTorch/QPyTorch specifies the mapping from latent function values
         :math:`f(\mathbf X)` to observed labels :math:`y`.
 
         For example, in the case of regression this might be a Gaussian or Q-Exponential
         distribution, as :math:`y(\mathbf x)` is equal to :math:`f(\mathbf x)` plus Gaussian (Q-Exponential) noise:
 
         .. math::
-            y(\mathbf x) = f(\mathbf x) + \epsilon, \:\:\:\: \epsilon \sim N(0,\sigma^{2}_{n} \mathbf I) \:\: or \:\: \textrm{q\!-\!ED}(0,\sigma^{2}_{n} \mathbf I)
+            y(\mathbf x) = f(\mathbf x) + \epsilon, \:\:\:\: \epsilon \sim N(0,\sigma^{2}_{n} \mathbf I) \:\: or \:\: \textrm{q-ED}(0,\sigma^{2}_{n} \mathbf I)
 
         In the case of classification, this might be a Bernoulli distribution,
         where the probability that :math:`y=1` is given by the latent function
@@ -109,7 +109,7 @@ try:
                 0 & \text{w/ probability} \:\: 1-\sigma(f(\mathbf x))
             \end{cases}
 
-        In either case, to implement a likelihood function, GPyTorch only
+        In either case, to implement a likelihood function, GPyTorch/QPyTorch only
         requires a forward method that computes the conditional distribution
         :math:`p(y \mid f(\mathbf x))`.
 
@@ -329,16 +329,15 @@ try:
 
                 mean = torch.randn(20)
                 covar = linear_operator.operators.DiagLinearOperator(torch.ones(20))
-                f = qpytorch.distributions.MultivariateNormal(mean, covar) or 
-                power = torch.tensor(1.0)
-                f = qpytorch.distributions.MultivariateQExponential(mean, covar, power)
+                f = qpytorch.distributions.MultivariateNormal(mean, covar) 
+                # or qpytorch.distributions.MultivariateQExponential(mean, covar, power=torch.tensor(1.0))
 
                 # Analytic marginal computation - Bernoulli and Gaussian and Q-Exponential likelihoods only
                 analytic_marginal_likelihood = qpytorch.likelihoods.GaussianLikelihood() 
-                #or qpytorch.likelihoods.QExponentialLikelihood()
+                # or qpytorch.likelihoods.QExponentialLikelihood()
                 marginal = analytic_marginal_likelihood(f)
                 print(type(marginal), marginal.batch_shape, marginal.event_shape)
-                # >>> <class 'gpytorch.distributions.multivariate_normal.MultivariateNormal'> torch.Size([]) torch.Size([20])  # noqa: E501
+                # >>> <class 'qpytorch.distributions.multivariate_normal.MultivariateNormal'> torch.Size([]) torch.Size([20])  # noqa: E501
                 # or >>> <class 'qpytorch.distributions.multivariate_qexponential.MultivariateQExponential'> torch.Size([]) torch.Size([20])
 
                 # MC marginal computation - all other likelihoods

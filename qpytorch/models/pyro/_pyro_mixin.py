@@ -32,7 +32,7 @@ class _PyroMixin(object):
             prior_distribution = prior_distribution.to_event(len(prior_distribution.batch_shape))
             u_samples = pyro.sample(name_prefix + ".u", prior_distribution)
 
-        # Include term for GPyTorch priors
+        # Include term for QPyTorch priors
         log_prior = torch.tensor(0.0, dtype=u_samples.dtype, device=u_samples.device)
         for _, module, prior, closure, _ in self.named_priors():
             log_prior.add_(prior.log_prob(closure(module)).sum())

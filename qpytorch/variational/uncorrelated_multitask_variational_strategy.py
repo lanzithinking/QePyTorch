@@ -95,7 +95,7 @@ class MultitaskVariationalStrategy(UncorrelatedMultitaskVariationalStrategy):
     """
     UncorrelatedMultitaskVariationalStrategy wraps an existing
     :obj:`~qpytorch.variational.VariationalStrategy`
-    to produce a :obj:`~qpytorch.variational.MultitaskMultivariateQExponential` distribution.
+    to produce a :obj:`~qpytorch.distributions.MultitaskMultivariateQExponential` distribution.
     All outputs will be uncorrelated to one another.
 
     The base variational strategy is assumed to operate on a batch of QEPs. One of the batch

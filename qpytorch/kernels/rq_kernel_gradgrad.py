@@ -17,7 +17,7 @@ class RQKernelGradGrad(RQKernel):
     .. note::
 
         This kernel does not have an `outputscale` parameter. To add a scaling parameter,
-        decorate this kernel with a :class:`qpytorch.kernels.ScaleKernel`.
+        decorate this kernel with a :class:`gpytorch.kernels.ScaleKernel`.
 
     :param ard_num_dims: Set this if you want a separate lengthscale for each input
         dimension. It should be `d` if x1 is a `n x d` matrix. (Default: `None`.)

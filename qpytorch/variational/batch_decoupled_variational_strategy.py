@@ -89,7 +89,7 @@ class BatchDecoupledVariationalStrategy(VariationalStrategy):
         https://arxiv.org/abs/1910.07123
 
     Example (**different** hypers for mean/variance):
-        >>> class MeanFieldDecoupledModel(qpytorch.models.ApproximateGP or qpytorch.models.ApproximateQEP):
+        >>> class MeanFieldDecoupledModel(qpytorch.models.ApproximateGP):# or qpytorch.models.ApproximateQEP):
         >>>     '''
         >>>     A batch of 3 independent MeanFieldDecoupled PPGPR (PPQEP) models.
         >>>     '''
@@ -113,7 +113,7 @@ class BatchDecoupledVariationalStrategy(VariationalStrategy):
         >>>         )
 
     Example (**shared** hypers for mean/variance):
-        >>> class MeanFieldDecoupledModel(qpytorch.models.ApproximateGP or qpytorch.models.ApproximateQEP):
+        >>> class MeanFieldDecoupledModel(qpytorch.models.ApproximateGP):# or qpytorch.models.ApproximateQEP):
         >>>     '''
         >>>     A batch of 3 independent MeanFieldDecoupled PPGPR (PPQEP) models.
         >>>     '''

@@ -490,7 +490,7 @@ class Kernel(Module):
                 "The last_dim_is_batch argument is deprecated, and will be removed in GPyTorch 2.0. "
                 "If you are using it as part of AdditiveStructureKernel or ProductStructureKernel, "
                 'please update your code according to the "Kernels with Additive or Product Structure" '
-                "tutorial in the GPyTorch docs.",
+                "tutorial in the QPyTorch docs.",
                 DeprecationWarning,
             )
 

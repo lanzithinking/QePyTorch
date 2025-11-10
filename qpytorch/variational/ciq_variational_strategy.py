@@ -189,7 +189,7 @@ class CiqVariationalStrategy(_VariationalStrategy):
         if self._ngd():
             raise RuntimeError(
                 "Variational distribution for NGD-CIQ should be computed during forward calls. "
-                "This is probably a bug in GPyTorch."
+                "This is probably a bug in QPyTorch."
             )
         return super().variational_distribution
 
@@ -277,7 +277,7 @@ class CiqVariationalStrategy(_VariationalStrategy):
             else:
                 raise RuntimeError(
                     "KL divergence for NGD-CIQ should be computed during forward calls."
-                    "This is probably a bug in GPyTorch."
+                    "This is probably a bug in QPyTorch."
                 )
         else:
             return super().kl_divergence()

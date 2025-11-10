@@ -131,7 +131,7 @@ class DefaultPredictionStrategy(object):
                 concatenated with fantasy inputs
             full_targets (Tensor `b1 x ... x bk x n+m` or `f x b1 x ... x bk x n+m`): Training labels
                 concatenated with fantasy labels.
-            full_output (:class:`gpytorch.distributions.MultivariateNormal` or :class:`gpytorch.distributions.MultivariateQExponential`): Prior called on full_inputs
+            full_output (:class:`gpytorch.distributions.MultivariateNormal` or :class:`qpytorch.distributions.MultivariateQExponential`): Prior called on full_inputs
 
         Returns:
             A `DefaultPredictionStrategy` model with `n + m` training examples, where the `m` fantasy examples have
@@ -866,11 +866,11 @@ class SQEPRPredictionStrategy(DefaultPredictionStrategy):
         elif isinstance(test_train_covar, LowRankRootAddedDiagLinearOperator):
             L = test_train_covar._linear_op.root.to_dense()
         else:
-            # We should not hit this point of the code - this is to catch potential bugs in GPyTorch
+            # We should not hit this point of the code - this is to catch potential bugs in QPyTorch
             raise ValueError(
                 "Expected SQEPR output to be a MatmulLinearOperator or AddedDiagLinearOperator. "
                 f"Got {test_train_covar.__class__.__name__} instead. "
-                "This is likely a bug in GPyTorch."
+                "This is likely a bug in QPyTorch."
             )
 
         res = test_test_covar - MatmulLinearOperator(L, covar_cache @ L.mT)

@@ -95,7 +95,7 @@ class MultitaskVariationalStrategy(IndependentMultitaskVariationalStrategy):
     """
     IndependentMultitaskVariationalStrategy wraps an existing
     :obj:`~qpytorch.variational.VariationalStrategy`
-    to produce a :obj:`~gpytorch.variational.MultitaskMultivariateNormal` distribution.
+    to produce a :obj:`~gpytorch.distributions.MultitaskMultivariateNormal` distribution.
     All outputs will be independent of one another.
 
     The base variational strategy is assumed to operate on a batch of GPs. One of the batch

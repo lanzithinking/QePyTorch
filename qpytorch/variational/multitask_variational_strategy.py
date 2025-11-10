@@ -46,7 +46,7 @@ def _ensure_updated_strategy_flag_set(
         state_dict[prefix + "updated_strategy"] = torch.tensor(False, device=device)
         warnings.warn(
             "You have loaded a variational GP (QEP) model (using `VariationalStrategy`) from a previous version of "
-            "GPyTorch. We have updated the parameters of your model to work with the new version of "
+            "QPyTorch. We have updated the parameters of your model to work with the new version of "
             "`VariationalStrategy` that uses whitened parameters.\nYour model will work as expected, but we "
             "recommend that you re-save your model.",
             OldVersionWarning,

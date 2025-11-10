@@ -49,7 +49,7 @@ class NNVariationalStrategy(UnwhitenedVariationalStrategy):
 
         We recommend installing the `faiss`_ library (requiring separate package installment)
         for nearest neighbor search, which is significantly faster than the `scikit-learn` nearest neighbor search.
-        GPyTorch will automatically use `faiss` if it is installed, but will revert to `scikit-learn` otherwise.
+        QPyTorch will automatically use `faiss` if it is installed, but will revert to `scikit-learn` otherwise.
 
         Different inducing point orderings will produce in different nearest neighbor approximations.
 

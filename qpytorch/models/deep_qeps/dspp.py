@@ -16,7 +16,7 @@ class DSPPLayer(DeepQEPLayer):
     From an end user perspective, the functionality and usage of a DSPPLayer is essentially identical to that of a
     DeepQEPLayer. It is therefore recommended that you review the documentation for DeepQEPLayer.
 
-    :param ~gpytorch.variational.VariationalStrategy variational_strategy: Strategy for
+    :param ~qpytorch.variational.VariationalStrategy variational_strategy: Strategy for
         changing q(u) -> q(f) (see other VI docs)
     :param int input_dims: Dimensionality of input data expected by each QEP
     :param int output_dims: (default None) Number of QEPs in this layer, equivalent to
@@ -96,7 +96,7 @@ class DSPPLayer(DeepQEPLayer):
 class DSPP(DeepQEP):
     """
     A container module to build a DSPP
-    This module should contain :obj:`~gpytorch.models.deep_qeps.DSPPLayer`
+    This module should contain :obj:`~qpytorch.models.deep_qeps.DSPPLayer`
     modules, and can also contain other modules as well.
 
     This Module contains an additional set of parameters, `raw_quad_weights`, that represent the mixture weights for

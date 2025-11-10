@@ -8,20 +8,20 @@ from ._pyro_mixin import _PyroMixin
 
 class PyroQEP(QEP, _PyroMixin):
     """
-    A :obj:`~gpytorch.models.ApproximateQEP` designed to work with Pyro.
+    A :obj:`~qpytorch.models.ApproximateQEP` designed to work with Pyro.
 
     This module makes it possible to include QEP models with more complex probablistic models,
     or to use likelihood functions with additional variational/approximate distributions.
 
     The parameters of these models are learned using Pyro's inference tools, unlike other models
-    that optimize models with respect to a :obj:`~gpytorch.mlls.MarginalLogLikelihood`.
+    that optimize models with respect to a :obj:`~qpytorch.mlls.MarginalLogLikelihood`.
     See `the Pyro examples <examples/09_Pyro_Integration/index.html>`_ for detailed examples.
 
     Args:
-        variational_strategy (:obj:`~gpytorch.variational.VariationalStrategy`):
+        variational_strategy (:obj:`~qpytorch.variational.VariationalStrategy`):
             The variational strategy that defines the variational distribution and
             the marginalization strategy.
-        likelihood (:obj:`~gpytorch.likelihoods.Likelihood`):
+        likelihood (:obj:`~qpytorch.likelihoods.Likelihood`):
             The likelihood for the model
         num_data (int):
             The total number of training data points (necessary for SGD)
@@ -35,11 +35,11 @@ class PyroQEP(QEP, _PyroMixin):
             (similarly to what was proposed in `the beta-VAE paper`_).
 
     Example:
-        >>> class MyVariationalQEP(gpytorch.models.PyroQEP):
+        >>> class MyVariationalQEP(qpytorch.models.PyroQEP):
         >>>     # implementation
         >>>
         >>> # variational_strategy = ...
-        >>> likelihood = gpytorch.likelihoods.QExponentialLikelihood()
+        >>> likelihood = qpytorch.likelihoods.QExponentialLikelihood()
         >>> model = MyVariationalQEP(variational_strategy, likelihood, train_y.size())
         >>>
         >>> optimizer = pyro.optim.Adam({"lr": 0.01})

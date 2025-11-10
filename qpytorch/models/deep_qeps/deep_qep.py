@@ -38,7 +38,7 @@ class DeepQEPLayer(ApproximateQEP):
     will change to be much more elegant with multiple batch dimensions; however, the interface doesn't really
     change.
 
-    :param ~gpytorch.variational.VariationalStrategy variational_strategy: Strategy for
+    :param ~qpytorch.variational.VariationalStrategy variational_strategy: Strategy for
         changing q(u) -> q(f) (see other VI docs)
     :param int input_dims`: Dimensionality of input data expected by each QEP
     :param int output_dims: (default None) Number of QEPs in this layer, equivalent to
@@ -113,7 +113,7 @@ class DeepQEPLayer(ApproximateQEP):
 class DeepQEP(QEP):
     """
     A container module to build a DeepQEP.
-    This module should contain :obj:`~gpytorch.models.deep.DeepQEPLayer`
+    This module should contain :obj:`~qpytorch.models.deep_qeps.DeepQEPLayer`
     modules, and can also contain other modules as well.
     """
 
@@ -127,17 +127,17 @@ class DeepQEP(QEP):
 
 class DeepLikelihood(Likelihood):
     """
-    A wrapper to make a GPyTorch likelihood compatible with Deep QEPs
+    A wrapper to make a QPyTorch likelihood compatible with Deep QEPs
 
     Example:
-        >>> deep_qexponential_likelihood = gpytorch.likelihoods.DeepLikelihood(gpytorch.likelihood.QExponentialLikelihood)
+        >>> deep_qexponential_likelihood = qpytorch.models.deep_qeps.DeepLikelihood(qpytorch.likelihood.QExponentialLikelihood)
     """
 
     def __init__(self, base_likelihood):
         super().__init__()
         warnings.warn(
             "DeepLikelihood is now deprecated. Use a standard likelihood in conjunction with a "
-            "gpytorch.mlls.DeepApproximateMLL. See the DeepQEP example in our documentation.",
+            "qpytorch.mlls.DeepApproximateMLL. See the DeepQEP example in our documentation.",
             DeprecationWarning,
         )
         self.base_likelihood = base_likelihood

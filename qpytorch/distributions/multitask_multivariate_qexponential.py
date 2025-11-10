@@ -85,7 +85,7 @@ class MultitaskMultivariateQExponential(MultivariateQExponential):
     @classmethod
     def from_batch_qep(cls, batch_qep, task_dim=-1):
         """
-        Reinterprate a batch of multivariate q-exponential distributions as an (uncorrelated) multitask multivariate q-exponential
+        Reinterpret a batch of multivariate q-exponential distributions as an (uncorrelated) multitask multivariate q-exponential
         distribution.
 
         :param ~qpytorch.distributions.MultivariateQExponential batch_qep: The base QEP distribution.
