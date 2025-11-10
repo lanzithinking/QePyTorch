@@ -12,6 +12,7 @@ from gpytorch import (
     settings,
 )
 from . import (
+    constraints,
     distributions,
     kernels,
     lazy,
@@ -288,6 +289,7 @@ except Exception:  # pragma: no cover
 
 __all__ = [
     # Submodules
+    "constraints",
     "distributions",
     "kernels",
     "lazy",

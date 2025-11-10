@@ -306,7 +306,7 @@ def _process(annotation, config):
     This function is recursive.
     """
     # Simple/base case: any string annotation is ready to go
-    if type(annotation) == str:
+    if isinstance(annotation, str):
         return annotation
 
     # Jaxtyping: shaped tensors or linear operator

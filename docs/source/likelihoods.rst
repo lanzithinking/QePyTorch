@@ -125,10 +125,24 @@ where :math:`t` is the number of output dimensions.)
    :members:
 
 
+:hidden:`HadamardGaussianLikelihood`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: HadamardGaussianLikelihood
+   :members:
+
+
 :hlmod:`MultitaskQExponentialLikelihood`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: MultitaskQExponentialLikelihood
+   :members:
+
+
+:hlmod:`HadamardQExponentialLikelihood`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. autoclass:: HadamardQExponentialLikelihood
    :members:
 
 

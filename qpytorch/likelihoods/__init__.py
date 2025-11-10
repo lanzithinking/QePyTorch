@@ -16,6 +16,8 @@ from .qexponential_likelihood import (
     FixedNoiseQExponentialLikelihood,
     QExponentialDirichletClassificationLikelihood,
 )
+from .hadamard_gaussian_likelihood import HadamardGaussianLikelihood
+from .hadamard_qexponential_likelihood import HadamardQExponentialLikelihood
 from .laplace_likelihood import LaplaceLikelihood
 from .likelihood import _OneDimensionalLikelihood, Likelihood
 from .likelihood_list import LikelihoodList
@@ -51,6 +53,8 @@ __all__ = [
     "QExponentialLikelihood",
     "GaussianLikelihoodWithMissingObs",
     "QExponentialLikelihoodWithMissingObs",
+    "HadamardGaussianLikelihood",
+    "HadamardQExponentialLikelihood",
     "HeteroskedasticNoise",
     "LaplaceLikelihood",
     "Likelihood",
